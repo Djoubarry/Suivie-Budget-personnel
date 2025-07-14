@@ -1,0 +1,203 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+    /* padding: 20px; */
+    padding: 5% 20%;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2d98da;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+/* SECTIONS */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+section article {
+    flex: 1 1 30%;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    min-width: 200px;
+    text-align: center;
+}
+
+section article h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #2d98da;
+}
+
+#search {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+
+/* FORMULAIRE */
+main {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input[type="radio"] {
+    margin-right: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #2d98da;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2276b8;
+}
+
+/* TABLEAU DES TRANSACTIONS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f0f4f8;
+    color: #2d98da;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+button.delete-btn {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* BOUTON SUPPRIMER TOUT */
+#supprimer-all {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    font-weight: bold;
+}
+
+#supprimer-all:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.erreur {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    th, td {
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    section article h2 {
+        font-size: 1rem;
+    }
+}

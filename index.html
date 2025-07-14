@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    
+
+</head>
+<body>
+    <header>
+        <h1>💰 Suivi de Budget Personnel </h1>
+    </header>
+    <section>
+        <article>
+            <h2>Solde Total</h2>
+            <p id="solde-total" ></p>
+        </article>
+
+        <article>
+            <h2>Solde Revenus</h2>
+            <p id="solde-revenu" ></p>
+        </article>
+
+        <article>
+            <h2>Solde Dépense</h2>
+            <p id="solde-depenses" ></p>
+        </article>
+    </section>
+
+    <main>
+        <p id="message-erreur" class="erreur"></p>
+        <form action="#" id="formSubmit">
+            <label for="description">Description :</label>
+            <input type="text" name="description" id="description">
+
+            <label for="montant">Montant :</label>
+            <input type="number" id="montant" name="montant">
+
+            <label for="type">Type :</label>
+            <input type="radio" id="revenu" name="type" value="revenu">
+            <label for="revenu">Revenu</label>
+            <input type="radio" id="depense" name="type" value="depense">
+            <label for="depense">Dépense</label>
+
+            <button type="submit" id="ajouter">Ajouter</button>
+        </form>
+    </main>
+
+    <section>
+        <input type="text" id="search" placeholder="Rechercher une transaction..." />
+
+        <table id="transaction-table" >
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Montant</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>23/04/2005</td>
+                    <td>Salaire</td>
+                    <td>Revenu</td>
+                    <td>+40 000</td>
+                    <td>supprimer</td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit" id="supprimer-all">Supprimer tout</button>
+        
+        <canvas id="budgetChart" style="max-width: 500px; margin: 30px auto; display: block;"></canvas>
+    </section>
+
+
+</body>
+<script src="script.js" defer></script>
+</html>
